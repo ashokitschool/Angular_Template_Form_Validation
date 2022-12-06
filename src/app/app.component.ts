@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app6';
+
+  msg:string="";
+   
+  submit(form:any){    
+    console.log(form.firstName);
+    console.log(form.lastName);
+    console.log(form.comment);
+    this.msg="Contact Form Submitted For "+form.firstName;
+  }
 }
